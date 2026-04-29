@@ -3,21 +3,21 @@ import "./globals.css";
 import { siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Awe In Life",
+  title: "Awe",
   description:
     "An interactive map for noticing awe in human accomplishment, nature, and everyday life.",
   openGraph: {
-    title: "Awe In Life",
+    title: "Awe",
     description:
       "Choose a path and find awe in accomplishments, nature, and ordinary moments.",
-    siteName: "Awe In Life",
+    siteName: "Awe",
     url: siteUrl("/"),
     images: [
       {
         url: siteUrl("/generated/level-1-desktop.png"),
         width: 1600,
         height: 1000,
-        alt: "Awe In Life discovery map"
+        alt: "Awe discovery map"
       }
     ]
   }

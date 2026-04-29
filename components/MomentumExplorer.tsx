@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ArrowLeft, RotateCcw, Sparkles } from "lucide-react";
 import { useMemo, useState } from "react";
 import { scenes, type AwePath } from "@/lib/scenes";
-import { sitePath } from "@/lib/site";
+import { assetPath } from "@/lib/site";
 
 const pathCopy: Record<AwePath, string> = {
   people: "Notice the years of practice, courage, and care behind what people build.",
@@ -41,9 +41,9 @@ export function AweExplorer() {
   return (
     <main className="app-shell">
       <header className="topbar" aria-label="Awe In Life controls">
-        <a className="brand" href={sitePath("/")}>
+        <a className="brand" href={assetPath("/")}>
           <Sparkles aria-hidden="true" size={18} />
-          <span>Awe In Life</span>
+          <span>Awe</span>
         </a>
         <div className="actions">
           <button onClick={stepBack} disabled={levelIndex === 0} aria-label="Go back">
@@ -57,10 +57,10 @@ export function AweExplorer() {
 
       <section className="stage" aria-label="Interactive awe map">
         <picture>
-          <source media="(max-width: 720px)" srcSet={sitePath(scene.mobileImage)} />
+          <source media="(max-width: 720px)" srcSet={assetPath(scene.mobileImage)} />
           <Image
             className="scene-image"
-            src={sitePath(scene.desktopImage)}
+            src={assetPath(scene.desktopImage)}
             alt={`${scene.title}: ${scene.focus}`}
             width={1600}
             height={1000}
