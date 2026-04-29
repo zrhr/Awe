@@ -1,0 +1,21 @@
+image: node:22
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - npm ci
+    - NEXT_PUBLIC_BASE_PATH="${NEXT_PUBLIC_BASE_PATH:-/${CI_PROJECT_NAME}}" NEXT_PUBLIC_SITE_URL="${CI_PAGES_URL:-http://localhost:3000}" npm run build
+  artifacts:
+    paths:
+      - out
+  pages:
+    publish: out
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
