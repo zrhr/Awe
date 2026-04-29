@@ -40,7 +40,7 @@ export function AweExplorer() {
 
   return (
     <main className="app-shell">
-      <header className="topbar" aria-label="Awe In Life controls">
+      <header className="topbar" aria-label="Awe controls">
         <a className="brand" href={assetPath("/")}>
           <Sparkles aria-hidden="true" size={18} />
           <span>Awe</span>

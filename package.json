@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "pages:build": "NEXT_PUBLIC_BASE_PATH=/awe-in-life npm run build && rm -rf docs && mkdir docs && cp -R out/. docs/ && touch docs/.nojekyll",
+    "pages:build": "NEXT_PUBLIC_BASE_PATH=/Awe NEXT_PUBLIC_SITE_URL=https://zrhr.github.io/Awe npm run build && rm -rf docs && mkdir docs && cp -R out/. docs/ && touch docs/.nojekyll",
     "start": "next start",
     "lint": "next lint"
   },
